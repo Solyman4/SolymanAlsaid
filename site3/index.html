@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find And Change</title>
+
+    <link href="css/first.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1 style="text-align: center; margin-top: 40px;">Find And Change</h1>
+
+    <section>
+        <textarea id="input1" type="text" placeholder="Enter Text Here..."></textarea>
+
+        <div class="mid">
+            <div>
+                <div>The Word</div>
+                <div><input id="wordInput" type="text"></div>
+                <div><input id="check" type="checkbox"> <label for="check" id="checkl"> Case sensitive</label></div>
+            </div>
+
+            <div>
+                <div>Replace With</div>
+                <div><input id="changeInput" type="text"></div>
+            </div>
+
+            <div>
+                <button onclick="change()">Change</button>
+            </div>
+
+            <div>
+                <div id="counter">---</div>
+            </div>
+        </div>
+
+        <textarea id="input2" type="text"></textarea>
+
+    </section>
+
+
+
+
+
+    <script src="js/first.js"></script>
+</body>
+
+</html>

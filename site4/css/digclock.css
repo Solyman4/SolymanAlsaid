@@ -1,0 +1,71 @@
+.digclock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+
+.dhour,
+.dmin,
+.dsec {
+    font-family: Arial;
+    font-size: 7em;
+    color: #eef3d3;
+    margin: 0 10px 0 10px;
+    padding: 30px 40px 30px 40px;
+    border: 4px solid #151525;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+        inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+        0 15px 15px rgba(0, 0, 0, 0.3),
+        inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+span {
+    font-size: 7em;
+    color: #f7ffcd;
+}
+
+.digclock p {
+    font-size: 4.5em;
+    position: relative;
+    top: 55px;
+    margin-left: 20px;
+    color: #f7ffcd;
+}
+
+.cbt {
+    margin-bottom: 6%;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    background-color: #151525;
+    color: rgb(209, 209, 209);
+    font-size: 16px;
+    border: 4px solid #151525;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+        inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+        0 15px 15px rgba(0, 0, 0, 0.3),
+        inset 0 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cbt:hover {
+    color: rgb(165, 165, 165);
+}
+
+#ampm {
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 610px) {
+
+    .dhour,
+    .dmin,
+    .dsec,
+    .digclock p,
+    span {
+        font-size: 3em;
+    }
+}

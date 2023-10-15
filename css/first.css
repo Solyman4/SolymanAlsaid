@@ -1,0 +1,434 @@
+/*for debugging  */
+/* * {      
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }  */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.64;
+}
+
+section,
+footer {
+    min-height: 105vh;
+    margin-top: -45px;
+    font-size: 22px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header h1 {
+    font-size: 65px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.35);
+}
+
+header p {
+    position: relative;
+    bottom: 45px;
+    font-weight: 200;
+    font-size: 21px;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: no-repeat;
+    background-attachment: fixed;
+    background-image: url("../images/lap1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+header a {
+    color: #b6c2ff;
+}
+
+header>* {
+    position: relative;
+    z-index: 2;
+}
+
+header:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1f1e1e99;
+}
+
+#langB {
+    background: none;
+    outline: none;
+}
+
+
+.title {
+    color: #497f8a;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.sectNameCon {
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+.sectNameCon h2 {
+    font-size: 54px;
+    text-align: center;
+}
+
+.sectNameCon p {
+    text-align: center;
+    color: #727878;
+    margin-bottom: 40px;
+    position: relative;
+    bottom: 40px;
+
+}
+
+.con {
+    background-image: linear-gradient(120deg, #F3EFE0 0%, #f4e19c 48%, #ffe482 100%);
+}
+
+
+.frow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+p {
+    text-align: justify;
+    margin: 10px;
+}
+
+.frow li {
+    border-top: 1px solid #a4acac;
+    width: 400px;
+
+}
+
+.imgli {
+    text-align: center;
+}
+
+.imgli img {
+    border-radius: 50%;
+    border: 10px #7bc0f1 solid;
+    margin: 20px 10px 20px 10px;
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.con2 {
+    background-image: linear-gradient(-225deg, #cff0f6 0%, #a4d2f3 48%, #a7d5f4 100%);
+
+}
+
+.exep {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.exep>li {
+    border-top: 1px solid #a4acac;
+    width: 500px;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.eli {
+    opacity: 0;
+}
+
+.moh {
+    font-size: 19px;
+    transform: translateX(-80px);
+}
+
+.moh li {
+    margin-bottom: 20px;
+}
+
+.abilcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 70px;
+    direction: ltr;
+}
+
+
+
+
+.abilcon li {
+    width: 400px;
+    padding: 5px;
+    transition: background-color 0.5s;
+}
+
+
+
+.abilcon li .imgc {
+    float: right;
+}
+
+
+
+.star {
+    width: 15px;
+    height: 15px;
+    transition: 0.5s;
+}
+
+
+
+.abilcon li:hover {
+    background-color: #fff2d7;
+    transition: 0.2s;
+}
+
+.abilcon li:hover .star {
+    width: 18px;
+    height: 18px;
+    transition: 0.2s;
+}
+
+.wecon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wecon li {
+    border-top: 1px solid #a4acac;
+    margin-bottom: 30px;
+}
+
+.imageCon {
+    position: relative;
+    width: 450px;
+    height: 270px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #221a1a;
+    filter: blur(0.75px);
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(86, 150, 165, 0.6);
+    backdrop-filter: blur(5px);
+    font-family: sans-serif;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.45s;
+}
+
+.img-overlay>* {
+    transform: translateX(-20px);
+    transition: 0.45s;
+}
+
+.img-overlay:hover>* {
+    transform: translateY(0);
+}
+
+.img-overlay:hover {
+    opacity: 1;
+}
+
+.img-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0px 5px 0px 5px;
+    border-bottom: 1px solid #ffffff59;
+}
+
+.img-desc {
+    margin: 15px 15px 0px 15px;
+}
+
+
+
+footer {
+    background-color: #494949;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+.titf {
+    color: whitesmoke;
+}
+
+.Fcon {
+    text-align: center;
+}
+
+.Fcon div {
+    color: #a5a5a5;
+}
+
+.Fcon img {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+    top: 10px;
+    opacity: 0.6;
+}
+
+.flink:hover {
+    color: whitesmoke;
+}
+
+.flink:hover img {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 940px) {
+    header h1 {
+        font-size: 45px;
+    }
+
+    .frow {
+        flex-wrap: wrap;
+    }
+
+    .frow li {
+        margin-right: 10px;
+    }
+
+    .moh {
+        display: none;
+    }
+
+    .abilcon {
+        flex-direction: column;
+    }
+
+    .abil2 {
+        position: relative;
+        bottom: 45px;
+    }
+
+    .img-overlay {
+        opacity: 1;
+        backdrop-filter: blur(2px);
+    }
+
+    .img-overlay>* {
+        transform: translateX(0px);
+    }
+
+    .wecon {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 610px) {
+    .det {
+        text-align: center;
+    }
+
+    .frow:lang(en) {
+        margin-left: -20px;
+    }
+
+    .frow:lang(ar) {
+        margin-right: -30px;
+    }
+
+
+    .abilcon {
+        margin-left: -40px;
+    }
+
+    .abilcon li {
+        width: 330px;
+    }
+
+    .imageCon {
+        width: 300px;
+    }
+
+    .wecon:lang(en) {
+        margin-left: -40px;
+    }
+
+    .wecon:lang(ar) {
+        margin-right: -40px;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+}

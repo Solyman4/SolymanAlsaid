@@ -1,0 +1,20 @@
+.homeB {
+    padding: 10px 40px;
+    background: lime;
+    border: none;
+    border-radius: 50px;
+}
+
+.item1c { 
+    font-size: 30px;
+}
+
+.logo { 
+    background-image:url("../images/ic_logo.png") ;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 0%;
+    padding: 50px;
+    text-indent: -10000px;
+}

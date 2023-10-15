@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #413d65;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 160px;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-size: 50px;
+}
+
+.Con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.fcon input {
+    background-color: #dbd8e3;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    width: 350px;
+    padding: 15px 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+
+
+.addB {
+    background-color: #85cfcb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 25px;
+    margin-top: 10px;
+}
+
+.addB:hover {
+    background-color: #a3fffa;
+}
+
+.addB:active {
+    background-color: #77b9b7;
+}
+
+.Todot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transition: 1s;
+}
+
+.ps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.p {
+    font-size: 2.5rem;
+    width: 100%;
+    padding: 10px;
+    padding-right: 50px;
+    margin: 10px 0px;
+    border-radius: 3px;
+    word-wrap: break-word;
+    transition: 0.5s;
+}
+
+.checkCon {
+    width: 28px;
+    height: 28px;
+    transform: translateX(-65px);
+    position: absolute;
+}
+
+.checkb {
+    width: 100%;
+    height: 100%;
+}
+
+.delb,
+.colb {
+    margin: 3px 5px;
+}
+
+
+
+.delb {
+    background-color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    outline: none;
+    border: none;
+    background-image: url(../images/x.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 6px;
+    padding: 15px 25px;
+}
+
+.delb:hover {
+    background-color: #ff4c4c;
+}
+
+.delb:active {
+    background-color: #be0101;
+}
+
+.colb {
+    background-color: #85cfcb;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    outline: none;
+    border: none;
+    background-image: url(../images/color.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 6px;
+    padding: 15px 25px;
+}
+
+.colb:hover {
+    background-color: #a3fffa;
+}
+
+.colb:active {
+    background-color: #77b9b7;
+}

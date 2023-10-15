@@ -1,0 +1,48 @@
+.divSect { 
+    display: flex;
+}
+
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    background-color: #e0e0e0;
+}
+
+.ButtonSect { 
+    text-align: center;
+} 
+
+.ButtonSect div { 
+    font-size: 40px;
+    background-color: #e0e0e0;
+} 
+
+div { 
+    display: inline-block;
+    margin: auto;
+    padding:10px;
+    background:darksalmon;
+}
+
+.bClass {
+    padding: 30px;
+    background: cadetblue;
+}
+
+#CButton { 
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 180px;
+    outline: none;
+    border-color: royalblue;
+}
+
+#counterText { 
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+#counter { font-family: 'Franklin Gothic Medium';}

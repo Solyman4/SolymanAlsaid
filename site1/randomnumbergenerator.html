@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<link href="css/first.css" rel="stylesheet" />
+<link href="css/here2.css" rel="stylesheet" />
+
+<head>
+
+    <title>Random number generator</title>
+</head>
+
+<body>
+
+
+    <div id="RTitle">Random number generator</div>
+    <br>
+    <section>
+        <div class="T">From</div>
+        <div class="T">To</div>
+    </section>
+
+    <ul>
+        <li><input id="From" type="number" onkeypress="if(this.value.length==9) return false;"></li>
+        <li><input id="To" type="number" onkeypress="if(this.value.length==9) return false;"></li>
+    </ul>
+
+
+    <section>
+        <div id="RNumber">0</div>
+    </section>
+    <br>
+    <section>
+        <button id="RButton" onclick="RButton()">Random !</button>
+    </section>
+
+
+
+    <script src="js/first.js"></script>
+    <script src="js/RandomNumberGenerator.js"></script>
+</body>
+
+</html>

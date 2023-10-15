@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online Posts</title>
+    <link rel="stylesheet" href="css/first.css">
+</head>
+
+<body>
+    <header>
+        <a href="posts.html">English - الانجليزية</a>
+        <h1>منشورات</h1>
+        <p>انشر اي شي وسوف يظهر لاي احد يدخل الموقع ! .</p>
+    </header>
+
+    <div class="enterdiv">
+        <input type="text" id="inname" placeholder="أسمك" maxlength="25">
+        <textarea id="textarea" placeholder="اللي تبي تنشره ..."></textarea>
+        <button id="postb" onclick="Post()">انشر</button>
+    </div>
+
+    <div class="loaderCon">
+        <div class="lds-ring" id="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <div class="posts" id="posts">
+
+        <!-- <fieldset id="pFieldset">
+            <legend>Name</legend>
+            <div>
+                Posts
+                Post anything and it will be online and visible to all the peaple who visit this site ! .
+                Posts
+                Post anything and it will be online and visible to all the peaple who visit this site ! . Posts
+                Post anything and it will be online and visible to all the peaple who visit this site ! . Posts
+            </div>
+        </fieldset> -->
+
+
+
+    </div>
+
+
+    <!-- Firebase Database -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyD7FAy6fsqqi2DkEuDq_NtI3Q81NpMml0o",
+            authDomain: "webposts-a5370.firebaseapp.com",
+            databaseURL: "https://webposts-a5370.firebaseio.com",
+            projectId: "webposts-a5370",
+            storageBucket: "webposts-a5370.appspot.com",
+            messagingSenderId: "862182118253",
+            appId: "1:862182118253:web:b125df0632c1b8f9128064",
+            measurementId: "G-4YLV5NFW0Q"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="js/first.js"></script>
+</body>
+
+</html>

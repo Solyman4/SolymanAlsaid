@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Strong Password</title>
+
+    <link href="css/first.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <section>
+        <ul>
+            <li id="ti">Random Strong Password Generator</li>
+
+            <li id="passLli">
+                <label for="passL">Length of the Password (max:50)</label> <br>
+                <input type="number" id="passL" name="passL" value="8">
+            </li>
+
+            <li id="pass">Click Generate Password</li>
+
+            <li id="passBut">
+                <button onclick="generatePass()">Generate Password</button>
+                <img src="images/copy.png" alt="Copy" onclick="copy()" width="30px" height="30px">
+            </li>
+        </ul>
+    </section>
+
+
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/first.js"></script>
+    <!-- libraries -->
+    <script src="VanillaToasts-master/vanillatoasts.js"></script>
+    <link href="VanillaToasts-master/vanillatoasts.css" rel="stylesheet">
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time schedule Table</title>
+    <link rel="stylesheet" href="css/first.css">
+</head>
+
+<body ontouchstart>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+
+
+            <p>Choose a Time :</p>
+            <div class="cen">
+                <input id="dildate" type="datetime-local">
+                <div id="wardiv" style="color: red; margin-top: 10px; display: none;">time is already reserved !</div>
+            </div>
+
+            <p>Description : </p>
+            <div class="cen">
+                <textarea id="desc"></textarea>
+            </div>
+            <div class="cen">
+                <button id="confb">Confirm</button>
+                <div id="waitdiv" style="margin: 20px 0px; display: none;">Wait a moment ...</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="tableCon">
+
+        <header>
+            <div class="head">
+                <!-- <input type="time"> -->
+                <button class="cb" onclick="Reserve()">Reserve</button>
+                <div>Hello there</div>
+                <lable>Date :</lable>
+                <input id="sdate" type="date">
+                <div><button id="cf" class="cf">Refresh</button></div>
+
+                <div class="loaderCon" id="loader">
+                    <div class="lds-ring">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Saturday</th>
+                    <th>Friday</th>
+                    <th>Thursday</th>
+                    <th>Wednesday</th>
+                    <th>Tuesday</th>
+                    <th>Monday</th>
+                    <th>Sunday</th>
+                    <th>day/time</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="t0500 sat"></td>
+                    <td class="t0500 fri"></td>
+                    <td class="t0500 thu"></td>
+                    <td class="t0500 wed"></td>
+                    <td class="t0500 tue"></td>
+                    <td class="t0500 mon"></td>
+                    <td class="t0500 sun"></td>
+                    <td class="Timd">5:00 <span style="font-size: 11px;">AM</span></td>
+                </tr>
+                <tr>
+                    <td class="t0600 sat"></td>
+                    <td class="t0600 fri"></td>
+                    <td class="t0600 thu"></td>
+                    <td class="t0600 wed"></td>
+                    <td class="t0600 tue"></td>
+                    <td class="t0600 mon"></td>
+                    <td class="t0600 sun"></td>
+                    <td class="Timd">6:00 <span style="font-size: 11px;">AM</span></td>
+                </tr>
+                <tr>
+                    <td class="t0700 sat"></td>
+                    <td class="t0700 fri"></td>
+                    <td class="t0700 thu"></td>
+                    <td class="t0700 wed"></td>
+                    <td class="t0700 tue"></td>
+                    <td class="t0700 mon"></td>
+                    <td class="t0700 sun"></td>
+                    <td class="Timd">7:00 <span style="font-size: 11px;">AM</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t0800 sat"></td>
+                    <td class="t0800 fri"></td>
+                    <td class="t0800 thu"></td>
+                    <td class="t0800 wed"></td>
+                    <td class="t0800 tue"></td>
+                    <td class="t0800 mon"></td>
+                    <td class="t0800 sun"></td>
+                    <td class="Timd">8:00 <span style="font-size: 11px;">AM</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t0900 sat"></td>
+                    <td class="t0900 fri"></td>
+                    <td class="t0900 thu"></td>
+                    <td class="t0900 wed"></td>
+                    <td class="t0900 tue"></td>
+                    <td class="t0900 mon"></td>
+                    <td class="t0900 sun"></td>
+                    <td class="Timd">9:00 <span style="font-size: 11px;">AM</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t1000 sat"></td>
+                    <td class="t1000 fri"></td>
+                    <td class="t1000 thu"></td>
+                    <td class="t1000 wed"></td>
+                    <td class="t1000 tue"></td>
+                    <td class="t1000 mon"></td>
+                    <td class="t1000 sun"></td>
+                    <td class="Timd">10:00 <span style="font-size: 11px;">AM</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t1100 sat"></td>
+                    <td class="t1100 fri"></td>
+                    <td class="t1100 thu"></td>
+                    <td class="t1100 wed"></td>
+                    <td class="t1100 tue"></td>
+                    <td class="t1100 mon"></td>
+                    <td class="t1100 sun"></td>
+                    <td class="Timd">11:00 <span style="font-size: 11px;">AM</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="t1200 sat"></td>
+                    <td class="t1200 fri"></td>
+                    <td class="t1200 thu"></td>
+                    <td class="t1200 wed"></td>
+                    <td class="t1200 tue"></td>
+                    <td class="t1200 mon"></td>
+                    <td class="t1200 sun"></td>
+                    <td class="Timd">12:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t1300 sat"></td>
+                    <td class="t1300 fri"></td>
+                    <td class="t1300 thu"></td>
+                    <td class="t1300 wed"></td>
+                    <td class="t1300 tue"></td>
+                    <td class="t1300 mon"></td>
+                    <td class="t1300 sun"></td>
+                    <td class="Timd">1:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t1400 sat"></td>
+                    <td class="t1400 fri"></td>
+                    <td class="t1400 thu"></td>
+                    <td class="t1400 wed"></td>
+                    <td class="t1400 tue"></td>
+                    <td class="t1400 mon"></td>
+                    <td class="t1400 sun"></td>
+                    <td class="Timd">2:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t1500 sat"></td>
+                    <td class="t1500 fri"></td>
+                    <td class="t1500 thu"></td>
+                    <td class="t1500 wed"></td>
+                    <td class="t1500 tue"></td>
+                    <td class="t1500 mon"></td>
+                    <td class="t1500 sun"></td>
+                    <td class="Timd">3:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t1600 sat"></td>
+                    <td class="t1600 fri"></td>
+                    <td class="t1600 thu"></td>
+                    <td class="t1600 wed"></td>
+                    <td class="t1600 tue"></td>
+                    <td class="t1600 mon"></td>
+                    <td class="t1600 sun"></td>
+                    <td class="Timd">4:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t1700 sat"></td>
+                    <td class="t1700 fri"></td>
+                    <td class="t1700 thu"></td>
+                    <td class="t1700 wed"></td>
+                    <td class="t1700 tue"></td>
+                    <td class="t1700 mon"></td>
+                    <td class="t1700 sun"></td>
+                    <td class="Timd">5:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t1800 sat"></td>
+                    <td class="t1800 fri"></td>
+                    <td class="t1800 thu"></td>
+                    <td class="t1800 wed"></td>
+                    <td class="t1800 tue"></td>
+                    <td class="t1800 mon"></td>
+                    <td class="t1800 sun"></td>
+                    <td class="Timd">6:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t1900 sat"></td>
+                    <td class="t1900 fri"></td>
+                    <td class="t1900 thu"></td>
+                    <td class="t1900 wed"></td>
+                    <td class="t1900 tue"></td>
+                    <td class="t1900 mon"></td>
+                    <td class="t1900 sun"></td>
+                    <td class="Timd">7:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t2000 sat"></td>
+                    <td class="t2000 fri"></td>
+                    <td class="t2000 thu"></td>
+                    <td class="t2000 wed"></td>
+                    <td class="t2000 tue"></td>
+                    <td class="t2000 mon"></td>
+                    <td class="t2000 sun"></td>
+                    <td class="Timd">8:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t2100 sat"></td>
+                    <td class="t2100 fri"></td>
+                    <td class="t2100 thu"></td>
+                    <td class="t2100 wed"></td>
+                    <td class="t2100 tue"></td>
+                    <td class="t2100 mon"></td>
+                    <td class="t2100 sun"></td>
+                    <td class="Timd">9:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t2200 sat"></td>
+                    <td class="t2200 fri"></td>
+                    <td class="t2200 thu"></td>
+                    <td class="t2200 wed"></td>
+                    <td class="t2200 tue"></td>
+                    <td class="t2200 mon"></td>
+                    <td class="t2200 sun"></td>
+                    <td class="Timd">10:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t2300 sat"></td>
+                    <td class="t2300 fri"></td>
+                    <td class="t2300 thu"></td>
+                    <td class="t2300 wed"></td>
+                    <td class="t2300 tue"></td>
+                    <td class="t2300 mon"></td>
+                    <td class="t2300 sun"></td>
+                    <td class="Timd">11:00 <span style="font-size: 11px;">PM</span></td>
+                </tr>
+                <tr>
+                    <td class="t0000 sat"></td>
+                    <td class="t0000 fri"></td>
+                    <td class="t0000 thu"></td>
+                    <td class="t0000 wed"></td>
+                    <td class="t0000 tue"></td>
+                    <td class="t0000 mon"></td>
+                    <td class="t0000 sun"></td>
+                    <td class="Timd">12:00 <span style="font-size: 11px;">AM</span></td>
+                </tr>
+                <tr>
+                    <td class="t0100 sat"></td>
+                    <td class="t0100 fri"></td>
+                    <td class="t0100 thu"></td>
+                    <td class="t0100 wed"></td>
+                    <td class="t0100 tue"></td>
+                    <td class="t0100 mon"></td>
+                    <td class="t0100 sun"></td>
+                    <td class="Timd">1:00 <span style="font-size: 11px;">AM</span></td>
+                </tr>
+                <tr>
+                    <td class="t0200 sat"></td>
+                    <td class="t0200 fri"></td>
+                    <td class="t0200 thu"></td>
+                    <td class="t0200 wed"></td>
+                    <td class="t0200 tue"></td>
+                    <td class="t0200 mon"></td>
+                    <td class="t0200 sun"></td>
+                    <td class="Timd">2:00 <span style="font-size: 11px;">AM</span></td>
+                </tr>
+                <tr>
+                    <td class="t0300 sat"></td>
+                    <td class="t0300 fri"></td>
+                    <td class="t0300 thu"></td>
+                    <td class="t0300 wed"></td>
+                    <td class="t0300 tue"></td>
+                    <td class="t0300 mon"></td>
+                    <td class="t0300 sun"></td>
+                    <td class="Timd">3:00 <span style="font-size: 11px;">AM</span></td>
+                </tr>
+                <tr>
+                    <td class="t0400 sat"></td>
+                    <td class="t0400 fri"></td>
+                    <td class="t0400 thu"></td>
+                    <td class="t0400 wed"></td>
+                    <td class="t0400 tue"></td>
+                    <td class="t0400 mon"></td>
+                    <td class="t0400 sun"></td>
+                    <td class="Timd">4:00 <span style="font-size: 11px;">AM</span></td>
+                </tr>
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyABmScnPcpn5G1poc4yYqa1HvTTrx1sewA",
+            authDomain: "webtable-752fc.firebaseapp.com",
+            databaseURL: "https://webtable-752fc.firebaseio.com",
+            projectId: "webtable-752fc",
+            storageBucket: "webtable-752fc.appspot.com",
+            messagingSenderId: "1093089453219",
+            appId: "1:1093089453219:web:4c47ab2a3a6a737d7f4b16",
+            measurementId: "G-CZS3C9DFRZ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="js/first.js"></script>
+</body>
+
+</html>
